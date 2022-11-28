@@ -32,6 +32,9 @@
         "images"
       ]
     },
+    "product_price": {
+      "type": "string"
+    },
     "brand": {
       "type": "relation",
       "relation": "oneToOne",
@@ -42,8 +45,13 @@
       "relation": "oneToOne",
       "target": "api::category.category"
     },
-    "product_price": {
-      "type": "string"
+    "product_content": {
+      "type": "richtext",
+      "required": true
+    },
+    "product_desc": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

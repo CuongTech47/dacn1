@@ -1,8 +1,7 @@
 <template>
     <div v-for="(product, i) in products" :key="i">
-        <div v-if="product.attributes.category.data.id === catID"  >
-            <!-- <h1>{{product.attributes.category.data.id}}</h1>
-            <h1>{{msg}}</h1> -->
+        <div v-if="product.attributes.category.data.id == this.$route.params.id"  >
+          <router-link :to="`/chi-tiet-san-pham/${product.id}`">
             <div class="col-sm-4">
               <div class="product-image-wrapper">
                 <div class="single-products">
@@ -40,6 +39,8 @@
                 </div>
               </div>
             </div>
+          </router-link>
+            
         </div>
             
     </div>
@@ -50,10 +51,10 @@
 <script>
 import axios from "axios";
 export default {
-  name: 'CategoryCard',
-  props: {
-    catID: Number
-  },
+  name: 'CategoryProductCard',
+  // props: {
+  //   catID: Number
+  // },
   data(){
     return {
         products: []

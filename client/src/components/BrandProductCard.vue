@@ -1,11 +1,13 @@
 <template>
-        <div class="features_items">
-            <h2 class="title text-center">Sản phẩm mới </h2>
-            <div v-for="(product, i) in products" :key="i">
+  
+    <div v-for="(product, i) in products" :key="i">
+      <div v-if="product.attributes.brand.data.id == this.$route.params.id"  >
+          <router-link :to="`/chi-tiet-san-pham/${product.id}`">
             <div class="col-sm-4">
               <div class="product-image-wrapper">
                 <div class="single-products">
                   <div class="productinfo text-center">
+                    
                     <img :src="`http://localhost:1337${product.attributes.product_image.data.attributes.url}`" alt="" />
                     <h2>{{(product.attributes.product_price)}} VND</h2>
                     <p>{{product.attributes.product_name}}</p>
@@ -39,27 +41,27 @@
                 </div>
               </div>
             </div>
+          </router-link>
+           
         </div>
             
-   
-        </div>
-   
-     
-  
-  
+    </div>
+            
+ 
+         
 </template>
-
 <script>
 import axios from "axios";
 export default {
-  name: "Home",
-  data() {
+  name: 'BrandProductCard',
+  // props: {
+  //   braID: Number
+  // },
+  data(){
     return {
-      products : []
+        products: []
     }
   },
-  
-  methods: {},
   async created() {
     const res = await axios.get("http://localhost:1337/api/products?populate=*");
     console.log(res.data.data)
@@ -69,7 +71,7 @@ export default {
       this.swr();
     }
   },
-};
-</script>
 
-<style lang="less" scoped></style>
+  
+}
+</script>

@@ -13,8 +13,10 @@
               <img src="/assets/images/home/shipping.jpg" alt="" />
             </div>
           </div>
-  
-          <router-view/>
+          <div class="col-sm-9 padding-right">
+            <router-view/>
+          </div>
+          
         </div>
       </div>
     </section>

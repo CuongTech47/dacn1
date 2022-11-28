@@ -12,13 +12,15 @@
   "pluginOptions": {},
   "attributes": {
     "brand_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "brand_desc": {
+      "type": "richtext",
+      "required": true
     },
     "brand_slug": {
       "type": "string"
-    },
-    "brand_desc": {
-      "type": "richtext"
     }
   }
 }

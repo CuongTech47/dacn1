@@ -4,8 +4,7 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category",
-    "description": ""
+    "displayName": "Category"
   },
   "options": {
     "draftAndPublish": true
@@ -13,13 +12,16 @@
   "pluginOptions": {},
   "attributes": {
     "category_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "category_desc": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "category_slug": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
