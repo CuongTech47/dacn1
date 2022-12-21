@@ -1,5 +1,4 @@
 <template>
-  
     <div v-for="(product, i) in products" :key="i">
       <div v-if="product.attributes.brand.data.id == this.$route.params.id"  >
           <router-link :to="`/chi-tiet-san-pham/${product.id}`">

@@ -1,6 +1,7 @@
 <template>
   <Header/>
   <Slider/>
+  
   <!-- <Home/> -->
   <section>
       <div class="container">

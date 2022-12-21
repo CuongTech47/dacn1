@@ -67,6 +67,7 @@ export default {
       this.products = res.data.data;
     } else {
       this.swr();
+      
     }
   },
 };

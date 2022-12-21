@@ -3,6 +3,7 @@ import Home from '../views/HomeView.vue'
 import ShowCategoryProduct from '../views/ShowCategoryProductView.vue'
 import ShowBrandProduct from '../views/ShowBrandProductView.vue'
 import ShowProductDetails from '../views/ShowProductDetails.vue'
+import ShowCart from '../views/ShowCart.vue'
 const routes = [
   {
     path: '/',
@@ -23,6 +24,11 @@ const routes = [
     path: '/chi-tiet-san-pham/:id',
     name: 'ShowProductDetails',
     component: ShowProductDetails
+  },
+  {
+    path: '/cart',
+    name: 'ShowCart',
+    component: ShowCart
   },
   
   
