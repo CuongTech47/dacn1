@@ -88,7 +88,7 @@
                   <CartItem/>
                 <li>
                   <Dropdown>
-                    <a href="#"><i class="fa fa-lock"></i> Login</a>
+                    <a href="http://localhost:1337/api/connect/auth0"><i class="fa fa-lock"></i> Login</a>
                   </Dropdown>
                   
                 </li>

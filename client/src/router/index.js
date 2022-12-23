@@ -4,6 +4,8 @@ import ShowCategoryProduct from '../views/ShowCategoryProductView.vue'
 import ShowBrandProduct from '../views/ShowBrandProductView.vue'
 import ShowProductDetails from '../views/ShowProductDetails.vue'
 import ShowCart from '../views/ShowCart.vue'
+import LoginCheckOut from '../views/auth/LoginCheckOut.vue'
+import Register from '../views/auth/Register.vue'
 const routes = [
   {
     path: '/',
@@ -29,6 +31,16 @@ const routes = [
     path: '/cart',
     name: 'ShowCart',
     component: ShowCart
+  },
+  {
+    path: '/login',
+    name: 'LoginCheckOut',
+    component: LoginCheckOut
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
   },
   
   
