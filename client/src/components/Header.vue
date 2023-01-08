@@ -87,6 +87,7 @@
                 </li>
                   <CartItem/>
                 <li>
+                  {{user.username}}
                   <Dropdown>
                     <a href="http://localhost:1337/api/connect/auth0"><i class="fa fa-lock"></i> Login</a>
                   </Dropdown>
@@ -157,6 +158,12 @@ import CartItem from './CartItem.vue';
       components : {
         CartItem
       },
+      computed: {
+        ...mapGetters({
+          authenticated :'auth/authenticated',
+          user : 'auth/user'
+        })
+      }
       
         
     }

@@ -6,6 +6,11 @@ import ShowProductDetails from '../views/ShowProductDetails.vue'
 import ShowCart from '../views/ShowCart.vue'
 import LoginCheckOut from '../views/auth/LoginCheckOut.vue'
 import Register from '../views/auth/Register.vue'
+
+
+
+import ViewUIPlus from 'view-ui-plus';
+
 const routes = [
   {
     path: '/',
@@ -47,10 +52,8 @@ const routes = [
 ]
 
 
-// router.beforeEach((to , from , next)=> {
-//   document.title = `${process.env.VUE_APP_TITLE} - ${to.name}`
-//   next()
-// })
+
+
 
 const router = createRouter({
   routes,
@@ -59,5 +62,13 @@ const router = createRouter({
     return { top: 0 }
   }
 })
+router.beforeEach((to, from, next) => {
+  ViewUIPlus.LoadingBar.start();
+  next();
+});
+
+router.afterEach(route => {
+  ViewUIPlus.LoadingBar.finish();
+});
 
 export default router
