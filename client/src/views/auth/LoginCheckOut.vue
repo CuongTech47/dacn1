@@ -72,7 +72,17 @@ export default {
         signIn:'auth/signIn'
     }),
       loginUser() {
-        this.signIn(this.data)
+        if(this.data.identifier.trim()== "")
+          return this.e("Email is required")
+        if(this.data.password.trim() == "")
+          return this.e("password is required")
+        try {
+          this.signIn(this.data)
+          if(res)
+        } catch (error) {
+          
+        }
+        
         this.s("Dang nhap thanh Cong");
       }
   }

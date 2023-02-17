@@ -86,13 +86,16 @@
                   <Dropdown><a href="#"><i class="fa fa-crosshairs"></i> Checkout</a></Dropdown>
                 </li>
                   <CartItem/>
-                <li>
-                  {{user.username}}
-                  <Dropdown>
-                    <a href="http://localhost:1337/api/connect/auth0"><i class="fa fa-lock"></i> Login</a>
-                  </Dropdown>
-                  
-                </li>
+                  <template v-if="authenticated">
+                    <li>
+                      {{ user.username }}
+                      <Dropdown>
+                        <a href="http://localhost:1337/api/connect/auth0"><i class="fa fa-lock"></i> Login</a>
+                      </Dropdown>
+                      
+                    </li>
+                  </template>
+              
               </ul>
             </div>
           </div>
